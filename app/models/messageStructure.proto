@@ -1,0 +1,19 @@
+syntax = "proto2";
+package models;
+
+message OutMessage{
+    enum Type {
+        UNKNOWN = 0;
+        CIPHERTEXT = 1;
+        KEY_EXCHANGE = 2;
+        PREKEY_BUNDLE = 3;
+        RECEIPT = 5;
+    }
+    optional Type type = 1 [default = CIPHERTEXT];
+    optional string source = 2 [default = ""];
+    optional string relay = 3 [default = ""];
+    optional int64 timestamp = 5 [default = 0];
+    optional bytes legacyMessage = 6 [default = ""];
+    optional int64 sourceDevice = 7 [default = 1];
+    optional bytes content = 8 [default = ""];
+}

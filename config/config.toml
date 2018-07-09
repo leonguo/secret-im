@@ -1,0 +1,71 @@
+title = 'test'
+host = "http://localhost:8090"
+
+[system]
+    port = ":8090"
+
+[accountdb]
+    pg_host = "127.0.0.1"
+    pg_port = 5432
+    pg_user = "postgres"
+    pg_password = "123456"
+    pg_dbname = "accountdb"
+
+[messagedb]
+    pg_host = "127.0.0.1"
+    pg_port = 5432
+    pg_user = "postgres"
+    pg_password = "123456"
+    pg_dbname = "messagedb"
+
+[redis]
+    [redis.directory]
+        addr = "127.0.0.1:6379"
+        password = ""
+        db = 0
+    [redis.cache]
+        addr = "127.0.0.1:6379"
+        password = ""
+        db = 1
+
+[apn] # Apple 推送配置
+    bundleI  = ""
+    pushCertificate = ""
+    pushKey = ""
+    sandbox = "true"
+
+[gcm] # google 推送配置
+    apiKey = ""
+    senderId = ""
+
+[turn] # TURN 穿透服务配置
+    secret= ""
+    uris = [
+    ]
+
+# s3资料存储
+[s3_attachments]
+     accessKey = ""
+     accessSecret = ""
+     bucket = "im-00"
+     region = "ap-northeast-1"
+
+[s3_profiles]
+     accessKey = ""
+     accessSecret = ""
+     bucket = "im-01"
+     region = "ap-northeast-1"
+
+# 测试手机号 不用发送短信
+[[testDevices]]
+    number = "+8618575682804"
+    code = "123456"
+[[testDevices]]
+    number = "+8612345678900"
+    code = "123456"
+[[testDevices]]
+    number = "+8615920073987"
+    code = "123456"
+[[testDevices]]
+    number = "+8612345678911"
+    code = "123456"
