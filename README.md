@@ -9,3 +9,5 @@
 ### todo list
   - 多设备登录
   - 群组聊天(队列)
+
+from [signalapp libsignal-service-java](https://github.com/signalapp/libsignal-service-java)
